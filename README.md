@@ -4,7 +4,7 @@
 
 ## Demo 🎉
 
-<https://piecioshka.github.io/warsawjs-workshop-43-online-store/>
+<https://marlucz.github.io/warsawjs-workshop-43-online-store/>
 
 ## Motivation
 

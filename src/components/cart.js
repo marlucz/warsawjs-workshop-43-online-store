@@ -1,4 +1,5 @@
 import { Component } from './component';
+import { Product } from './product';
 
 export class Cart extends Component {
     constructor() {
@@ -8,15 +9,22 @@ export class Cart extends Component {
 
     get template() {
         return `
-        <div class="cart">
-            <button class="btn btn-primary">
-                Cart (XXX)
-            </button>
-        </div>
+            <div class="cart">
+                <button class="btn btn-primary">
+                    Cart (XXX)
+                </button>
+            </div>
         `;
     }
 
     addProduct(product) {
-        this.list.push(product);
+        return new Promise((resolve, reject) => {
+            if (product instanceof Product) {
+                this.list.push(product);
+                resolve(this.list.length);
+            } else {
+                reject(this.list.length);
+            }
+        });
     }
 }
